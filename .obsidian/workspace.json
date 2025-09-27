@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "4a25237d8ee4b7ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "b7a919d1dbba34e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "89df545015a8b4fe",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Tasks.base",
+                "viewName": "All"
+              },
+              "icon": "lucide-table",
+              "title": "Tasks"
+            }
+          },
+          {
+            "id": "167087da00e2459f",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Projects.base",
+                "viewName": "All"
+              },
+              "pinned": true,
+              "icon": "lucide-table",
+              "title": "Projects"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7039f31cb8fa8e91",
+    "type": "split",
+    "children": [
+      {
+        "id": "27648d62a3b5f07c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b95dcf0a35489d0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "33dd1b3888fdcda3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5ea16d357ba27086",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "08543f23161bd2fb",
+    "type": "split",
+    "children": [
+      {
+        "id": "c10b499546d33c6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f31164373b9c299",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tasks.base",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Tasks"
+            }
+          },
+          {
+            "id": "fd2894e7a9506cef",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "3700e89e5ac0e6ad",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "709ecc5f41e171d7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "ba38a412ec219d1f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "obsidian-kanban:Create new board": false,
+      "switcher:Open quick switcher": false,
+      "command-palette:Open command palette": false,
+      "obsidian-projects:Open projects": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "89df545015a8b4fe",
+  "lastOpenFiles": [
+    "Projects.base",
+    "Tasks.base",
+    "tasks/Assign Darth Vader to oversee.md",
+    "tasks/Assign Darth Vader to oversee.md",
+    "projects/Deathstar.md",
+    "tasks/Assign Darth Vader to supervise.md",
+    "tasks/Collect materials.md",
+    "_templates/task.md",
+    "tasks/Spread rebel activity.md",
+    "tasks/Hire workers.md",
+    "tasks/Hire soldiers.md",
+    "tasks/Encourage rebel activity.md",
+    "tasks/Build weapons.md",
+    "tasks/Do something.md",
+    "projects/Subjugate the masses.md",
+    "projects/Build a rebellion.md",
+    "_templates/project.md",
+    "Untitled 1.md",
+    "categories/Tasks.md",
+    "categories/Projects.md",
+    "categories",
+    "tasks",
+    "projects",
+    "projects/Payment context for rider tip.md",
+    "Dashboard.md",
+    "projects/Post-order rider tips.md",
+    "tasks/Block mixed-payments properly using the flag.md",
+    "tasks/celebrate wins for tech-debt management.md",
+    "tasks/Follow up on tickets to resolve double-tipping issue.md",
+    "tasks/Follow up on missing invoices in HU.md",
+    "tasks/start conversation with PM",
+    "tasks/Q4 Maturity Assessment",
+    "tasks/Rider tips on OTP",
+    "projects",
+    "_templates"
+  ]
+}

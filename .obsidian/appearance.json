@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Border",
+  "theme": "obsidian",
+  "baseFontSize": 13,
+  "accentColor": "#e2c9ee",
+  "textFontFamily": "Berkeley Mono",
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "Berkeley Mono",
+  "enabledCssSnippets": [
+    "custom"
+  ]
+}

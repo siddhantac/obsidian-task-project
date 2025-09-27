@@ -1,0 +1,210 @@
+filters:
+  and:
+    - file.folder != "_templates"
+    - type == link("Tasks")
+formulas:
+  link: link(url, "link")
+  testbed: '[icon("flag"),icon("flag"), icon("flag")].slice(0,priority)'
+  statusIcon: if(!done, if(tags.contains("wip"), icon("circle-dot-dashed"), if(tags.contains("waiting"), icon("loader"), "")), "")
+properties:
+  formula.testbed:
+    displayName: priorityIcon
+views:
+  - type: table
+    name: Today
+    filters:
+      and:
+        - date <= date(now())
+        - done == false
+    order:
+      - done
+      - formula.testbed
+      - formula.statusIcon
+      - file.name
+      - date
+      - tags
+      - project
+      - formula.link
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: priority
+        direction: DESC
+      - property: scheduled
+        direction: DESC
+    columnSize:
+      note.done: 38
+      formula.testbed: 77
+      formula.statusIcon: 69
+      file.name: 172
+      note.date: 135
+      note.tags: 89
+      note.project: 375
+  - type: table
+    name: Project
+    filters:
+      and:
+        - file.hasLink(this)
+    order:
+      - done
+      - formula.statusIcon
+      - file.name
+      - date
+    sort:
+      - property: done
+        direction: ASC
+      - property: priority
+        direction: ASC
+      - property: date
+        direction: ASC
+    columnSize:
+      note.done: 50
+      formula.statusIcon: 32
+      file.name: 185
+      note.date: 178
+  - type: table
+    name: Todo
+    filters:
+      and:
+        - done == false
+    order:
+      - done
+      - file.name
+      - tags
+      - project
+      - priority
+      - date
+    sort:
+      - property: priority
+        direction: ASC
+      - property: scheduled
+        direction: ASC
+    columnSize:
+      note.done: 38
+      file.name: 359
+      note.tags: 89
+      note.project: 305
+      note.scheduled: 128
+  - type: table
+    name: Done
+    filters:
+      and:
+        - done == true
+    order:
+      - done
+      - formula.statusIcon
+      - file.name
+      - project
+      - priority
+      - archived
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      property.scheduled: 125
+  - type: table
+    name: All
+    order:
+      - done
+      - formula.testbed
+      - formula.statusIcon
+      - file.name
+      - tags
+      - date
+      - project
+    sort:
+      - property: property.project
+        direction: ASC
+      - property: property.slack
+        direction: ASC
+      - property: property.priority
+        direction: ASC
+      - property: property.scheduled
+        direction: ASC
+    columnSize:
+      note.done: 50
+      formula.testbed: 77
+      formula.statusIcon: 57
+      file.name: 204
+      note.tags: 89
+      note.date: 178
+      note.project: 375
+  - type: table
+    name: Tomorrow
+    filters:
+      and:
+        - done == false
+        - date <= date(now()+'1d')
+    order:
+      - done
+      - formula.prioIcon
+      - formula.icon2
+      - file.name
+      - tags
+      - url
+      - status
+      - date
+      - project
+      - priority
+    sort:
+      - property: priority
+        direction: ASC
+      - property: property.scheduled
+        direction: ASC
+    columnSize:
+      formula.prioIcon: 67
+      formula.icon2: 40
+      file.name: 303
+      note.tags: 89
+      note.url: 67
+      formula.sch2: 113
+      note.scheduled: 128
+      note.project: 375
+      note.priority: 158
+  - type: table
+    name: Done day
+    filters:
+      and:
+        - done == true
+        - file.mtime.date() == this.date
+    order:
+      - done
+      - file.name
+      - status
+      - project
+      - archived
+    sort:
+      - property: file.mtime
+        direction: DESC
+      - property: file.mtime
+        direction: DESC
+      - property: property.priority
+        direction: ASC
+    columnSize:
+      file.name: 346
+      note.project: 263
+  - type: table
+    name: High priority
+    filters:
+      and:
+        - done == false
+        - priority > 2
+    order:
+      - done
+      - file.name
+      - tags
+      - project
+      - priority
+      - date
+    sort:
+      - property: priority
+        direction: ASC
+      - property: scheduled
+        direction: ASC
+    columnSize:
+      note.done: 38
+      file.name: 359
+      note.tags: 89
+      note.project: 305
+      note.scheduled: 128

@@ -1,0 +1,14 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "started": "date",
+    "completed": "date",
+    "priority": "number",
+    "done": "checkbox",
+    "related": "multitext",
+    "github": "multitext",
+    "slack": "multitext"
+  }
+}

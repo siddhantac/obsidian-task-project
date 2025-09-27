@@ -1,0 +1,72 @@
+filters:
+  and:
+    - type == link("Projects")
+    - file.folder != "_templates"
+formulas:
+  project: link(file.name, aliases[0])
+  tasklinks: file.backlinks.filter(value.contains("tasks"))
+  taskstatus: ((formula.tasklinks.filter(link(value).asFile().properties["done"].isTruthy()).length / formula.tasklinks.length) * 100).round() + "%"
+properties:
+  formula.taskstatus:
+    displayName: progress
+views:
+  - type: table
+    name: In progress
+    filters:
+      and:
+        - status.contains("in-progress")
+    order:
+      - formula.project
+      - formula.taskstatus
+      - tags
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      formula.project: 227
+      formula.taskstatus: 116
+  - type: table
+    name: All
+    order:
+      - file.name
+      - formula.taskstatus
+      - status
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 190
+      note.status: 112
+  - type: table
+    name: Done
+    filters:
+      and:
+        - done == true
+    order:
+      - formula.project
+      - status
+      - end
+    sort:
+      - property: end
+        direction: DESC
+      - property: start
+        direction: DESC
+    columnSize:
+      formula.project: 301
+      note.status: 82
+  - type: table
+    name: Todo
+    filters:
+      and:
+        - '!status.containsAny("in-progress", "cancelled", "done")'
+    order:
+      - formula.project
+      - status
+      - duty
+    sort:
+      - property: start
+        direction: DESC
+    columnSize:
+      formula.project: 301
+      note.status: 112
+      note.start: 136
