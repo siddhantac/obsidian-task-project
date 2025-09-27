@@ -16,8 +16,8 @@ A minimal vault to manage tasks and projects in Obsidian, powered by Bases.
 
 ## Screenshots
 
-### Screenshots
+### Tasks
 ![tasks](_assets/screenshot_tasks.png)
 
-### Tasks
-![projects](_assets/screenshot_tasks.png)
+### Projects
+![projects](_assets/screenshot_projects.png)
