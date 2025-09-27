@@ -1,7 +1,5 @@
 [
   "obsidian-minimal-settings",
-  "obsidian-linter",
   "templater-obsidian",
-  "obsidian-icon-folder",
-  "nldates-obsidian"
+  "obsidian-icon-folder"
 ]

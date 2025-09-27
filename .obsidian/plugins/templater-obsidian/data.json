@@ -30,7 +30,7 @@
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
     "_templates/task.md",
-    "_templates/log.md"
+    "_templates/project.md"
   ],
   "startup_templates": [
     ""
