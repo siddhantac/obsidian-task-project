@@ -5,7 +5,8 @@ A minimal vault to manage tasks and projects in Obsidian, powered by Bases.
 - Project files show related tasks
 - Project base shows progress based on number of completed tasks
 - Template support
-	- Task and project template with auto-discovery of projects
+	- Task and project template 
+- Prompt to choose a project when a task is created
 
 ## Hotkeys
 
